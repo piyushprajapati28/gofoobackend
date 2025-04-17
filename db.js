@@ -10,7 +10,7 @@ const Food = mongoose.models.Foods || mongoose.model('Foods', foodSchema);
 
 const connectDb = async (DATABASE_URL) => {
     try {
-        // Connect to the database
+        
         await mongoose.connect(DATABASE_URL, {
             dbName: 'apna',
             useNewUrlParser: true,
@@ -26,7 +26,7 @@ const connectDb = async (DATABASE_URL) => {
         global.Foods = data;
         global.foodCategory = foodCategory;
 
-        // console.log("Food Categories:", foodCategory);
+       
 
 
 
