@@ -16,7 +16,7 @@ app.use(cors({
 app.use(express.json());
 
 connectDb(DATABASE_URL)
-  .then(() => console.log("Connected to the database"))
+  .then(() =>  console.log("Connected to the database"))
   .catch((err) => {
     console.error("Database connection failed", err);
     process.exit(1);

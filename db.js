@@ -11,7 +11,7 @@ const Food = mongoose.models.Foods || mongoose.model('Foods', foodSchema);
 const connectDb = async (DATABASE_URL) => {
     try {
         
-        await mongoose.connect(DATABASE_URL, {
+        await mongoose.connect(process.env.DATABASE_URL, {
             dbName: 'apna',
             useNewUrlParser: true,
             useUnifiedTopology: true
